@@ -1,0 +1,9 @@
+CREATE DATABASE Stock;
+USE Stock;
+CREATE TABLE Produit(
+	ref VARCHAR(10),
+	desig VARCHAR(30),
+	pu DOUBLE,
+	qs DOUBLE,
+	PRIMARY KEY(ref)
+);

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Server>
+	<Port name="HTTP/1.1" protocol="HTTP">80</Port>
+<PathMapping local="/p01" module="p01" remote="C:\data\labs\2018-2019\E3\A\PHP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\htdocs\p01"/><PathMapping local="/p02" module="p02" remote="C:\data\labs\2018-2019\E3\A\PHP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\htdocs\p02"/><PathMapping local="/p03" module="p03" remote="C:\data\labs\2018-2019\E3\A\PHP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\htdocs\p03"/></Server>

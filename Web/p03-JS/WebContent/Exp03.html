@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="css/Component.css">
+	<script type="text/javascript">
+		var current = "file";
+		
+		function show(id) {
+			document.getElementById(current).style.display = "none";
+			document.getElementById(id).style.display = "block";
+			current = id;
+		}
+	</script>
+</head>
+<body>
+	<div class="Menu">
+		<span onclick="show('file')">File</span>
+		<span onclick="show('edit')">Edit</span>
+		<span onclick="show('source')">Source</span>
+	</div>
+	
+	<section class="Panel" id="file">
+		<header>Gestion des Fichiers</header>
+	</section>
+	
+	<section class="Panel Hidden" id="edit">
+		<header>Edition du texte</header>
+	</section>
+	
+	<section class="Panel Hidden" id="source">
+		<header>Source</header>
+	</section>
+</body>
+</html>

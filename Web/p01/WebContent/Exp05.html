@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" type="text/css" href="css/Component.css">
+</head>
+<body>
+	<h1>Les Formulaires</h1>
+	<form action="NouveauDocument.php" class="Form" method="post">
+	<!-- 
+	<table style="width: 100%;">
+		<tr>
+			<td>Identificateur :</td>
+			<td><input type="text" size="15" /></td>
+		</tr>
+		<tr>
+			<td>Titre :</td>
+			<td><input type="text" size="30" /></td>
+		</tr>
+	</table>
+	-->
+		<header>Nouveau Document</header>
+		
+		<div class="Field">
+			<label for="id">Identificateur :</label>
+			<input type="text" size="15" name="id" id="id"  />
+		</div>
+		
+		<div class="Field">
+			<label for="title">Titre :</label>
+			<textarea rows="3" cols="50" name="title" id="title"></textarea>
+		</div>
+		
+		<div class="Field">
+			<label for="price">Prix :</label>
+			<input type="text" size="10" name="price" id="price"  />
+		</div>
+		
+		<div class="ButtonPanel">
+			<span>Annuler</span>
+			<input type="submit" value="Valider" />
+		</div>
+	</form>
+</body>
+</html>

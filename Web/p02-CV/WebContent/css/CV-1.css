@@ -1,0 +1,132 @@
+/*
+.LeNomDeLaClasse {
+	
+}
+
+.le-nom-de-la-classe {
+	
+}
+*/
+.cv {
+	border: solid 1px buttonface;
+	margin: 50px;
+	
+	padding: 30px;
+}
+/************************************************************************************/
+.perso {
+	display: flex;
+	flex-direction: row;
+}
+
+.info {
+	flex-grow: 4;
+	border: dashed 1px gray;
+	
+	padding: 20px;
+}
+
+.info > div > div {
+	display: inline-block;
+	font-family: Consolas;
+}
+
+.info > div > div:first-child {
+	color: navy;
+	width: 30%;
+}
+
+.info > div > div:nth-child(2) {
+	font-weight: bold;
+}
+
+.photo {
+	flex-grow: 1;
+	border: dashed 1px gray;
+	/*
+	display: flex;
+	justify-content: flex-end;
+	*/
+}
+
+.photo > img {
+	margin-left: auto;
+	margin-right: auto;
+	
+	display: block;
+	width: 140px;
+}
+/************************************************************************************/
+
+.formation, .technos, .experience, .langues, .divers {
+	border: solid 1px rgb(46, 116, 181);
+	min-height: 100px;
+	
+	display: block;
+	margin-top: 40px;
+}
+
+header {
+	border: solid 2px rgb(46, 116, 181);
+	border-radius: 5px;
+	margin-left: 50px;
+	padding: 10px;
+	width: 70%;
+	background-color: white;
+	
+	color: rgb(46, 116, 181);
+	font-weight: bold;
+	font-family: Consolas;
+	font-size: 14px;
+	text-shadow: 1px 1px gray;
+	
+	position: relative;
+	top: -20px;
+	height: 16px;
+}
+
+.formation {
+	
+}
+
+.technos {
+	
+}
+
+.technos > div {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
+}
+
+.technos > div > div {
+	display: inline-block;
+	font-family: Consolas;
+	font-size: 14px;
+}
+
+.technos > div > div:first-child {
+	width: 30%;
+	color: navy;
+	font-weight: bold;
+	
+	vertical-align: top;
+}
+
+.technos > div > div:nth-child(2) {
+	width: 65%;
+	font-style: italic;
+	text-align: justify;
+}
+
+.experience {
+	
+}
+
+.langues {
+	
+}
+
+.divers {
+	
+}

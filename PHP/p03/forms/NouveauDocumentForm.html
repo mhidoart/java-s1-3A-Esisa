@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Nouveau document</h1>
+	<form action="../actions/NouveauDocumentAction.php" method="post">
+	<table>
+		<tr><td>Identificateur :</td><td>
+			<input type="text" size="10" name="isbn">
+		</td>
+		<tr><td>Titre :</td><td>
+			<input type="text" size="40" name="title">
+		</td>
+		<tr><td>Année d'édition :</td><td>
+			<input type="text" size="4" name="yearPublished">
+		</td>
+		<tr>
+			<td colspan="2" align="right">
+				<input type="submit" value="Valider" />
+			</td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>

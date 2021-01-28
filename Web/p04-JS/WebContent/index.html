@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="css/Component.css">
+	<script type="text/javascript" src="js/Produit.js"></script>
+	<script type="text/javascript" src="js/Stock.js"></script>
+	<script type="text/javascript" src="js/Facture.js"></script>
+	<script type="text/javascript" src="js/Actions.js"></script>
+	<script type="text/javascript" src="js/View.js"></script>
+	<script type="text/javascript">
+		function main() {
+			 menu = new Menu('stock');
+			 /*
+			 var e1 = document.children.item(0).children.item(1).children.item(0).firstChild;
+			 e1.nodeValue = "Test : " + e1.nodeValue;*/
+			 ajouterProduit(new Produit("R01", "Clavier", 250, 10));
+			 ajouterProduit(new Produit("R02", "Ecran", 1250, 5));
+			 ajouterProduit(new Produit("R03", "Souris", 160, 20));
+			 var d1 = new Date();
+			 setValue("ventes-date", d1.getFullYear() + "-0" 
+					 + (d1.getMonth() + 1) + "-" + d1.getDate());
+		}
+	</script>
+</head>
+
+<body onload="main()" ng-app="">
+	<!-- 	<esisa>Ecole ESISA</esisa> -->
+	<div class="Menu">
+		<span onclick="menu.show('nouveau-produit')">Nouveau Produit</span>
+		<span onclick="menu.show('stock')">Stock</span>
+		<span onclick="menu.show('ventes')">Ventes</span>
+		<span onclick="menu.show('factures')">Factures</span>
+	</div>
+	
+	<form class="Form Hidden" id="nouveau-produit">
+		<header>Nouveau Produit</header>
+		<div class="Field">
+			<label for="ref">Référence :</label>
+			<input type="text" size="15" id="ref" />
+		</div>
+		<div class="Field">
+			<label for="desig">Désignation :</label>
+			<input type="text" size="30" id="desig"  />
+		</div>
+		<div class="Field">
+			<label for="pu">Prix Unitaire :</label>
+			<input type="text" size="10" id="pu"  />
+		</div>
+		<div class="Field">
+			<label for="qs">Quantité en Stock :</label>
+			<input type="text" size="10" id="qs"  />
+		</div>
+		
+		<div class="ButtonPanel">
+			<input type="button" value="Valider" onclick="ajouterProduit()" />
+			<span>Annuler</span>
+		</div>
+	</form>
+	
+	<div class="Panel" id="stock">
+		<header>Stock</header>
+		<div class="Table">
+			<table id="table-stock">
+				<tr>
+					<th>Référence</th><th>Désignation</th><th>Prix</th><th>Quantité</th>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div class="Panel Hidden" id="ventes">
+		<header>Ventes</header>
+		<div>
+			Date : <input type="date" id="ventes-date">
+			Client : <input type="text" size="30">
+			<button class="Button" onclick="addTextBox()">Ajouter produit</button>
+			<div id="ventes-produits">
+				<div class="TextBox">
+					<input type="text" id="ventes-ref-0" 
+						onkeyup="chercherProduit(0)"
+						placeholder="Référence Produit"
+					/>
+					<div id="ventes-desig-0"></div>
+					<div id="ventes-pu-0"></div>
+					<input type="text" id="ventes-q-0" 
+						placeholder="Quantité"
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="Panel Hidden" id="factures">
+		<header>Factures</header>
+		<div>
+		
+		</div>
+	</div>
+</body>
+</html>
